@@ -1,0 +1,31 @@
+name: Builds
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: 0 0 * * MON
+jobs:
+  build:
+    name: Build for ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - macos-latest
+          - ubuntu-latest
+        ocaml-compiler:
+          - 5.0
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ocaml/setup-ocaml@v2
+        with:
+          ocaml-compiler: ${{ matrix.ocaml-compiler }}
+      - run: opam install . --deps-only
+      - run: opam exec -- dune build
+      - uses: actions/upload-artifact@v3
+        with:
+          name: ${{ matrix.os }}-ocaml-${{ matrix.ocaml-compiler }}-ocrypt.exe
+          path: _build/default/bin/ocrypt.exe

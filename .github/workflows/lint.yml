@@ -1,0 +1,24 @@
+name: Lints
+on:
+  pull_request:
+jobs:
+  lint-fmt:
+    name: Lint code formatting
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ocaml/setup-ocaml@v2
+        with:
+          ocaml-compiler: 5.0
+          dune-cache: true
+      - uses: ocaml/setup-ocaml/lint-fmt@v2
+  lint-doc:
+    name: Lint doc comments
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ocaml/setup-ocaml@v2
+        with:
+          ocaml-compiler: 5.0
+          dune-cache: true
+      - uses: ocaml/setup-ocaml/lint-doc@v2
