@@ -3,6 +3,7 @@ updates:
   - package-ecosystem: github-actions
     directory: /
     schedule:
-      - cron: 0 0 * * SUN
+      interval: "weekly"
+      day: "sunday"
     commit-message:
       prefix: "ci"
