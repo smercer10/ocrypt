@@ -1,3 +1,5 @@
+(** [Io] provides all necessary input/output operations for the tool. *)
+
 (** [read_file] reads the contents of [filename] into a buffer of raw bytes. *)
 let read_file filename =
   let ic = open_in filename in
