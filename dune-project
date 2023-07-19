@@ -17,9 +17,11 @@
 
 (package
  (name ocrypt)
- (synopsis "TBC")
- (description "TBC")
+ (synopsis "File encryption/decryption tool")
+ (description
+  "A simple command-line tool for password-based AES-256 file encryption/decryption.")
  (depends ocaml dune)
- (tags ("TBC")))
+ (tags
+  ("aes-256" "encryption-decryption" "command-line-tool")))
 
 ; See the complete stanza docs at https://dune.readthedocs.io/en/stable/dune-files.html#dune-project
