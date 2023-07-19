@@ -27,5 +27,5 @@ jobs:
       - run: opam exec -- dune build
       - uses: actions/upload-artifact@v3
         with:
-          name: ${{ matrix.os }}-ocaml-${{ matrix.ocaml-compiler }}-ocrypt.exe
-          path: _build/default/bin/ocrypt.exe
+          name: ${{ matrix.os }}-ocaml-${{ matrix.ocaml-compiler }}-oc.exe
+          path: _build/default/bin/oc.exe

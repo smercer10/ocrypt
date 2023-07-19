@@ -1,4 +1,4 @@
 (executable
- (public_name ocrypt)
- (name ocrypt)
+ (public_name oc)
+ (name oc)
  (libraries ocrypt))
