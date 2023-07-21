@@ -20,7 +20,7 @@
  (synopsis "File encryption/decryption tool")
  (description
   "A simple command-line tool for password-based AES-256 file encryption/decryption.")
- (depends ocaml dune)
+ (depends ocaml dune ppx_expect)
  (tags
   ("aes-256" "encryption-decryption" "command-line-tool")))
 

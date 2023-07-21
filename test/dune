@@ -1,2 +1,6 @@
-(test
- (name ocrypt))
+(library
+ (name test_ocrypt)
+ (libraries ocrypt)
+ (inline_tests)
+ (preprocess
+  (pps ppx_expect)))
