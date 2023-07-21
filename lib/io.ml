@@ -9,3 +9,11 @@ let read_file filename =
   close_in ic;
   buf
 ;;
+
+(** [write_file] writes a [buffer] of raw bytes to [filename]. *)
+let write_file filename buffer =
+  let oc = open_out filename in
+  let len = Bytes.length buffer in
+  output oc buffer 0 len;
+  close_out oc
+;;
