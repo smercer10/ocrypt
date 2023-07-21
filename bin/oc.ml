@@ -1,4 +1,4 @@
 open Ocrypt
 
-let contents = Io.read_file "test.txt"
-let () = print_endline Bytes.(to_string contents)
+let contents = Io.read_file "test-input.txt"
+let () = Io.write_file "test-output.txt" contents
