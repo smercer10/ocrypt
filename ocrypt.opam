@@ -13,6 +13,7 @@ bug-reports: "https://github.com/smercer10/ocrypt/issues"
 depends: [
   "ocaml"
   "dune" {>= "3.9"}
+  "ppx_expect"
   "odoc" {with-doc}
 ]
 build: [
