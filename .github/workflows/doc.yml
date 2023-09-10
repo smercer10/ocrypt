@@ -8,7 +8,7 @@ jobs:
     name: Deploy docs to GitHub Pages
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: ocaml/setup-ocaml@v2
         with:
           ocaml-compiler: 5.0
