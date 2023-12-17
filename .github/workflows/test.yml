@@ -25,7 +25,7 @@ jobs:
           ocaml-compiler: ${{ matrix.ocaml-compiler }}
       - run: opam install . --deps-only --with-test
       - run: opam exec -- dune test &> test-log.txt
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.os }}-ocaml-${{ matrix.ocaml-compiler }}-test-log.txt
           path: test-log.txt
