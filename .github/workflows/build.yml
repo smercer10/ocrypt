@@ -25,7 +25,7 @@ jobs:
           ocaml-compiler: ${{ matrix.ocaml-compiler }}
       - run: opam install . --deps-only
       - run: opam exec -- dune build
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.os }}-ocaml-${{ matrix.ocaml-compiler }}-oc.exe
           path: _build/default/bin/oc.exe
